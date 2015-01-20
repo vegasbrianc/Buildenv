@@ -19,16 +19,16 @@ FROM dockerfile/nodejs-bower-grunt
 
 MAINTAINER Brian Christner
 
-Run apt-get update
+Run sudo apt-get update
 
 # MongoDB
-RUN apt-get install -y mongodb
+RUN sudo apt-get install -y mongodb
 
 # Redis server
-RUN apt-get install -y redis-server
+RUN sudo apt-get install -y redis-server
 
 # RabbitMQ 
-Run apt-get install -y rabbitmq-server
+Run sudo apt-get install -y rabbitmq-server
 
 # Define mountable directories.
 VOLUME ["/data/db"]
