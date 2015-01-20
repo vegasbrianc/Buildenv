@@ -38,4 +38,5 @@ Run apt-get install -y rabbitmq-server
 # Start MongoDB
 CMD mongod --fork -f /etc/mongodb.conf \
  && redis-server /etc/redis/redis.conf \
+ && rabbitmq-start \
  && bash
