@@ -25,6 +25,7 @@ Run sudo apt-get update
 RUN sudo apt-get install -y mongodb
 
 # Redis server
+RUN mkdir /var/lib/rabbitmq
 RUN sudo apt-get install -y redis-server
 
 # RabbitMQ 
@@ -36,5 +37,5 @@ VOLUME ["/data/db"]
 # Start MongoDB
 CMD mongod --fork -f /etc/mongodb.conf \
  && redis-server /etc/redis/redis.conf \
- && rabbitmq-start \
+ && rabbitmq-server \
  && bash
