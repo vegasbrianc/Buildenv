@@ -15,7 +15,7 @@
 # - RabbitMQ 
 ##
 
-FROM truongsinh/nodejs
+FROM dockerfile/nodejs
 
 MAINTAINER Brian Christner
 
