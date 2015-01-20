@@ -21,15 +21,17 @@ MAINTAINER Brian Christner
 
 Run apt-get update
 
-# Configure Package Management System (APT) & install MongoDB
-RUN apt-get install -y mongodb \
-mkdir /data/db
+# MongoDB
+RUN apt-get install -y mongodb
 
 # Redis server
 RUN apt-get install -y redis-server
 
 # RabbitMQ 
 Run apt-get install -y rabbitmq-server
+
+# Define mountable directories.
+VOLUME ["/data/db"]
 
 # Start MongoDB
 CMD mongod --fork -f /etc/mongodb.conf \
