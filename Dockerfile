@@ -15,7 +15,7 @@
 # - RabbitMQ 
 ##
 
-FROM dockerfile/nodejs
+FROM docker pull dockerfile/nodejs-bower-grunt
 
 MAINTAINER Brian Christner
 
